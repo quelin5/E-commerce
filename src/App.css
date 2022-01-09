@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0%;
   text-decoration: none;
 }
 
@@ -10,10 +10,24 @@
   width: 100%;
   height: 20vh;
   position: absolute;
-  top: 75px;
+  top: 9%;
+  bottom: 3%;
   margin-left: 2%;
   text-indent: -9999px; /* This is for compulsory text to not display */
 }
+
+/* FREE DELIVERY WORLDWIDE */
+.free-delivery {
+  background-image: url("./images/freeDelivery.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  text-indent: -9999px;
+}
+.icon {
+  float: none;
+  content: "🚀";
+}
+/* ------------------------- */
 
 .search-bar-div {
   display: flex;
@@ -35,7 +49,6 @@
   border-radius: 15px;
   border: 0;
   cursor: pointer;
-  padding: 15px;
   background-color: #10bbd5;
   color: white;
 }
@@ -47,3 +60,106 @@
 .material-icons-outlined {
   margin: 5px;
 }
+
+.principal-wrapper {
+  background-color: #f0f0f0;
+}
+
+.footer-links {
+  background-color: #4c394e;
+  height: 10vh;
+}
+
+.footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: black;
+}
+
+/* SIGN UP */
+
+.footer-sign-up {
+  background-color: white;
+}
+
+.sign-up-text {
+  display: inline-flex;
+}
+
+.newslatter-section .sign-up-text img {
+  width: 3rem;
+}
+
+.sign-up-text p {
+  margin: 0;
+  padding: 2rem;
+}
+
+.newslatter-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0.5rem 0 0.2rem 0;
+  border-top: solid 2px #f0f0f0;
+}
+
+.newslatter-form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: inline-flex;
+}
+
+.form-group input {
+  height: 2.5rem;
+  margin: 0.5rem;
+}
+
+.form-group button {
+  height: 2.5rem;
+  margin: 0.5rem;
+  border-radius: 0.6rem;
+  border: 0;
+  cursor: pointer;
+  background-color: #10bbd5;
+  color: white;
+}
+
+.form-group button:hover {
+  filter: brightness(110%);
+}
+
+.footer-social-wrap {
+  color: #999;
+  display: block;
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-top: solid 2px #f0f0f0;
+}
+
+.footer-social-wrap ul {
+  display: block;
+  text-align: center;
+}
+
+a:link,
+a:hover {
+  text-decoration: none;
+}
+
+.footer-social-wrap li {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+  padding: 1rem 1.5rem 0;
+  font-size: 1.4rem;
+}
+
+.footer-social-wrap i {
+  color: #999;
+}
+/* END OF SIGN UP */

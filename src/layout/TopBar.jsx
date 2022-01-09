@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import '../App.css'; 
 
 
+
 const DivContainer = styled.div`
     background-color: #4c394e;
     width: 100%;
@@ -28,7 +29,8 @@ const SignInJoin = styled.a`
 `;
 
 const TopBar = () => {
-    return (  
+    return ( 
+       
         <DivContainer>
             <Basket href='/'><span class="material-icons-outlined">shopping_basket</span></Basket>
             <SignInJoin href='/'><span class="material-icons-outlined">login</span> Sign In / Join</SignInJoin>
