@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Principal from './pages/Principal'
 import AuthPage from './pages/AuthPage'
+import Basket from './components/Basket'
 import './App.css'; 
 
 
@@ -12,7 +13,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Principal />}>
         </Route>
-        <Route path='/authentication' element={<AuthPage />}>
+        <Route path='/auth' element={<AuthPage />}>
+        </Route>
+        <Route path='/basket' element={<Basket />}>
         </Route>
       </Routes>
     </BrowserRouter>

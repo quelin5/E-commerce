@@ -15,9 +15,9 @@ const Footer = () => {
                     </div>
 
                     <div className='newslatter-form'>
-                        <form class='form-group'>
+                        <form className='form-group'>
                             <div>
-                                <input type="email" class="form-control" placeholder="Email address" aria-label="Email address for newsletter subscription"/>
+                                <input type="email" className="form-control" placeholder="Email address" aria-label="Email address for newsletter subscription"/>
                             </div>
                             <div>
                                 <button type="submit"> Sign up now</button>
@@ -31,22 +31,22 @@ const Footer = () => {
                     <ul>
                         <li> 
                             <a rel="facebook" href="/">
-                                <i class="icon-facebook"></i> 
+                                <i className="icon-facebook"></i> 
                             </a>
                         </li>
                         <li>
                             <a rel="twitter" href="/">
-                                <i class="icon-twitter"></i>
+                                <i className="icon-twitter"></i>
                             </a>
                         </li>
                         <li>
                             <a rel="pinterest" href="/">
-                                <i class="icon-pinterest"></i>
+                                <i className="icon-pinterest"></i>
                             </a>
                         </li>
                         <li>
                             <a rel='instagram' href='/'>
-                                <i class="icon-instagram"></i>
+                                <i className="icon-instagram"></i>
                             </a>
                         </li>
                     </ul>

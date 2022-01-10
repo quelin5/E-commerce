@@ -32,8 +32,8 @@ const TopBar = () => {
     return ( 
        
         <DivContainer>
-            <Basket href='/'><span class="material-icons-outlined">shopping_basket</span></Basket>
-            <SignInJoin href='/'><span class="material-icons-outlined">login</span> Sign In / Join</SignInJoin>
+            <Basket href='/'><span className="material-icons-outlined">shopping_basket</span></Basket>
+            <SignInJoin href='/'><span className="material-icons-outlined">login</span> Sign In / Join</SignInJoin>
         </DivContainer>
     );
 }

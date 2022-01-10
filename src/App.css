@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0%;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -33,19 +33,21 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 2%;
   position: absolute;
   right: 0;
 }
 
-.search-bar {
-  width: 40vw;
-  height: 6vh;
+.search-bar-div input {
+  height: 40px;
+  margin: 0.5rem;
+  width: 30vw;
+  padding: 0.8rem;
 }
 
-.lupe-button {
-  margin: 4px;
-  height: 6vh;
+.search-button {
+  margin: 1rem;
+  padding: 0.8rem;
+  text-align: center;
   border-radius: 15px;
   border: 0;
   cursor: pointer;
@@ -53,7 +55,7 @@
   color: white;
 }
 
-.lupe-button:hover {
+.search-button:hover {
   filter: brightness(110%);
 }
 
