@@ -4,6 +4,7 @@ import Principal from './pages/Principal'
 import AuthPage from './pages/AuthPage'
 import Basket from './components/Basket'
 import './App.css'; 
+import WelcomePage from './pages/WelcomePage'
 
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Principal />}>
+        <Route path='/' element={<WelcomePage />}>
+        </Route>
+        <Route path='/main' element={<Principal />}>
         </Route>
         <Route path='/auth' element={<AuthPage />}>
         </Route>

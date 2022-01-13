@@ -2,48 +2,36 @@ import React, { Fragment, useState } from 'react'
 import styled from '@emotion/styled'
 import '../App.css'; 
 import TopBar from '../layout/TopBar'
+import SearchInput from '../layout/SearchInput'
 
 
-const Header = () => {
-
-    /* THE CODE ABOVE WILL BE PLACED IN THE SEARCHEDBOOK COMPONENT */
-
-    const [book, setBook] = useState('');
-    const [result, setResult] = useState([]);
-    const [apiKey, setApiKey] = useState('AIzaSyBgYWojBgarlimSZ0btpejO0RONPuxhqaw');
-
-    
-
-    function handleChange(e){
-        let texto = e.target.value;
-        setBook(texto);
-    }
-
-    function handleSubmit(e){
-        e.preventDefault();
-        console.log(book);
-    }
-
-    /* END OF CODE */ 
+const Header = ({setResult}) => {
 
     const HeaderDiv = styled.div`
-        background-color: #403042;
+        background-color: #FAEEE0;
         width: 100%;
         height: 15vh;
-        display: flex;     
+        display: flex;    
+        align-items: center;
+        justify-content: space-between;
+
+    `;
+
+    const Logo = styled.p`
+        color: white;
+        font-weight: bold;
+        font-size: 3.5em;
+        margin-left: 2rem;
     `;
 
     return ( 
     <Fragment>
         <TopBar />
         <HeaderDiv>
-            <div className='logo'>Logo</div>
-            <form onSubmit={handleSubmit}>
-                <div className='search-bar-div'>
-                    <input type="text" value={book} onKeyUp={handleChange} placeholder=" Search for books by title / author / ISBN"/>
-                    <button className="search-button" type="submit"> Search </button>
-                </div>
-            </form>
+            <Logo>The Book Depository</Logo>
+            <SearchInput
+                setResult={setResult}
+            />
         </HeaderDiv> 
     </Fragment>
     );

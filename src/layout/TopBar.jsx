@@ -5,7 +5,7 @@ import '../App.css';
 
 
 const DivContainer = styled.div`
-    background-color: #4c394e;
+    background-color: #DBD0C0;
     width: 100%;
     height: 7vh;
     display: flex;
