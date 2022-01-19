@@ -63,18 +63,18 @@
   color: black;
   text-align: center;
   margin: 1rem 0;
-  background-color: #fef7dc;
+  background-color: whitesmoke;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .book-title {
   font-weight: bold;
-  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .material-icons-outlined {
@@ -194,4 +194,57 @@ a:hover {
 
 .div-content-wrap {
   min-height: calc(100vh - 15vh);
+}
+
+.book-detail-review input {
+  padding: 4rem;
+  margin-top: 1rem;
+  text-align: start;
+  width: 40vw;
+}
+
+.book-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbd0c0;
+}
+
+.book-detail-infoDisplay,
+.book-detail-review,
+.book-detail-rating {
+  color: black;
+  text-align: center;
+  margin: 0.5rem 0;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 50vw;
+  border-radius: 25px;
+}
+
+.book-detail-rating {
+  margin-bottom: 1.5rem;
+}
+
+.book-detail-infoDisplay {
+  margin-top: 1.5rem;
+}
+
+.description {
+  overflow: hidden;
+  line-height: 1em;
+  height: 3em;
+}
+
+.show-more a {
+  color: grey;
+}
+
+.show-more a:hover {
+  color: #dbd0c0;
 }

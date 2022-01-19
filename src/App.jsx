@@ -3,8 +3,10 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Principal from './pages/Principal'
 import AuthPage from './pages/AuthPage'
 import Basket from './components/Basket'
+import BookCard from './pages/BookCard'
 import './App.css'; 
 import WelcomePage from './pages/WelcomePage'
+import BookDetail from './pages/BookDetail'
 
 
 function App() {
@@ -19,6 +21,10 @@ function App() {
         <Route path='/auth' element={<AuthPage />}>
         </Route>
         <Route path='/basket' element={<Basket />}>
+        </Route>
+        <Route path='/bookcard' element={<BookCard />}>
+        </Route>
+        <Route path='/bookdetail/:book' element={<BookDetail />}>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,19 +1,15 @@
-import React from 'react'
-import axios from 'axios'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
+import BookCard from '../pages/BookCard'
 
 const SearchedBook = ({result, setResult}) => {
 
-    
+    const [showContent, setShowContent] = useState(false);
+
     return ( 
         <div className='api-results-wrapper'>
             {result.map(book => (
-                <div className='book-wrapper'>
-                    <a href={book.volumeInfo.previewLink}>
-                        <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} />
-                        <p className='book-title'>{book.volumeInfo.title}</p>
-                        <p> by {book.volumeInfo.authors}</p>
-                    </a>
-                </div>
+                <BookCard key={book.volumeInfo.previewLink} book={book} />
             ))}
         </div>
     );

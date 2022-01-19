@@ -1,14 +1,25 @@
 import React, {Fragment} from 'react'
+import { Link } from "react-router-dom";
+
 import '../App.css'; 
 
 
-const BookCard = () => {
+const BookCard = ({book}) => {
+
     return (
-        <Fragment>
-            <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} />
-            <p className='book-title'>{book.volumeInfo.title}</p>
-            <p> by {book.volumeInfo.authors}</p>
-        </Fragment>
+        <Link 
+            to={`/bookdetail/:book${book.volumeInfo.title}`}
+            state={{
+                book
+            }}
+        >
+            <div className='book-wrapper'>  
+                <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} />
+                <p className='book-title'>{book.volumeInfo.title}</p>
+                <p> by {book.volumeInfo.authors}</p>
+            </div>
+        </Link>
+        
     );
 }
  
