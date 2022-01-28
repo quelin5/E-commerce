@@ -1,24 +1,25 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../App.css'; 
 import styled from '@emotion/styled'
 import {Link} from 'react-router-dom'
-import Principal from './Principal';
 
 const WelcomePage = () => {
 
-    const gotoMain = () => {
-        return <Link to={'/main'}></Link>
-    }
+    /* Initialize LocalStorage */
+    useEffect(() => {
+        localStorage.setItem('BookRating', '[]'),
+        localStorage.setItem('FavouriteBooks', '[]')
+    }, [])
 
     const FindNextBook = styled.button`
-        color: #9E7777;
-        background-color: #DBD0C0;
+        color: #DBD0C0;
+        background-color: #9E7777;
         padding: 2rem;
         border-radius: 10rem;
         cursor: pointer;
         border: none;
-        height: 20vh;
-        width: 25vw;
+        height: 12vh;
+        width: 20vw;
 
         :hover{
             filter: brightness(110%);
@@ -28,8 +29,10 @@ const WelcomePage = () => {
 
     return ( 
         <div className='principal-wrapper'>
+            <h1 className='welcome-h'>Welcome!</h1>
+            <h3 className='mainPage-h'> The Book Depository <br/> is a page for keeping your readings up-to-date.</h3>
             <Link to={'/main'}>
-                <FindNextBook onClick={gotoMain}>Find your next book → </FindNextBook>
+                <FindNextBook> Find your next book → </FindNextBook>
             </Link>
         </div>
     );

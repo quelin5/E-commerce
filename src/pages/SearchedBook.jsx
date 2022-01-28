@@ -1,17 +1,16 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
 import BookCard from '../pages/BookCard'
 
-const SearchedBook = ({result, setResult}) => {
-
-    const [showContent, setShowContent] = useState(false);
+const SearchedBook = ({result}) => {
 
     return ( 
-        <div className='api-results-wrapper'>
-            {result.map(book => (
-                <BookCard key={book.volumeInfo.previewLink} book={book} />
-            ))}
-        </div>
+        
+            <div className='api-results-wrapper'>
+                {result.map(book => (
+                    <BookCard key={book.volumeInfo.previewLink} book={book} />
+                ))}
+            </div>
+        
     );
 }
  

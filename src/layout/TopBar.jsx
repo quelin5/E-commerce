@@ -1,18 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import '../App.css'; 
-
-
-
-const DivContainer = styled.div`
-    background-color: #DBD0C0;
-    width: 100%;
-    height: 7vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-`;
+import {Link} from 'react-router-dom'
+import '../App.css';
 
 const Basket = styled.a`
     color: white;
@@ -29,12 +18,22 @@ const SignInJoin = styled.a`
 `;
 
 const TopBar = () => {
+
+    const [setDisplayBookList] = useState(false)
+
     return ( 
-       
-        <DivContainer>
-            <Basket href='/'><span className="material-icons-outlined">shopping_basket</span></Basket>
-            <SignInJoin href='/'><span className="material-icons-outlined">login</span> Sign In / Join</SignInJoin>
-        </DivContainer>
+        <div className='topbar-wrapper'>
+            <div className='fav-button-wrapper'>
+                <Link to='/favouriteBooks'>
+                    <button onClick={() => setDisplayBookList(true)}> Favourites </button>
+                </Link>
+                    <button> My books </button>
+            </div> 
+            <div className='basket-signin-wrapper'>
+                <Basket href='/'><span className="material-icons-outlined">shopping_basket</span></Basket>
+                <SignInJoin href='/'><span className="material-icons-outlined">login</span> Sign In / Join</SignInJoin>
+            </div>
+        </div>
     );
 }
  

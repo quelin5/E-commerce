@@ -1,9 +1,5 @@
 import React, { Fragment, useState} from 'react'
-import Header from '../layout/Header'
 import axios from 'axios';
-import styled from '@emotion/styled'
-import SearchedBook from '../pages/SearchedBook';
-
 
 const SearchInput = ({setResult}) => {
 

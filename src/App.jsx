@@ -7,6 +7,7 @@ import BookCard from './pages/BookCard'
 import './App.css'; 
 import WelcomePage from './pages/WelcomePage'
 import BookDetail from './pages/BookDetail'
+import FavBooksList from './pages/FavBooksList'
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Route path='/bookcard' element={<BookCard />}>
         </Route>
         <Route path='/bookdetail/:book' element={<BookDetail />}>
+        </Route>
+        <Route path='/favouriteBooks' element={<FavBooksList/>}>
         </Route>
       </Routes>
     </BrowserRouter>
